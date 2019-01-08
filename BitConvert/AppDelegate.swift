@@ -7,15 +7,31 @@
 //
 
 import UIKit
+import ReSwift
+import ReSwiftRouter
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var router: Router<AppState>!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UIViewController()
+        
+        let rootRoutable = RootRoutable(window: window)
+        router = Router(store: Dependency.shared.store, rootRoutable: rootRoutable) { state in
+            state.select { $0.navigationState }
+        }
+        if UserDefaults.standard.string(forKey: "userName") != nil {
+            Dependency.shared.store.dispatch(ReSwiftRouter.SetRouteAction([currencySelectorRoute]))
+        } else {
+            Dependency.shared.store.dispatch(ReSwiftRouter.SetRouteAction([onboardingRoute]))
+        }
+        window?.makeKeyAndVisible()
+    
         return true
     }
 
@@ -30,7 +46,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        if UserDefaults.standard.string(forKey: "userName") != nil {
+            Dependency.shared.store.dispatch(ReSwiftRouter.SetRouteAction([currencySelectorRoute]))
+            (window?.rootViewController as? UINavigationController)?.popViewController(animated: true)
+        }
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {

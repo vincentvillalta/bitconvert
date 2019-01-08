@@ -1,0 +1,65 @@
+PODS:
+  - Alamofire (4.8.0)
+  - IGListKit (3.4.0):
+    - IGListKit/Default (= 3.4.0)
+  - IGListKit/Default (3.4.0):
+    - IGListKit/Diffing
+  - IGListKit/Diffing (3.4.0)
+  - iOSSnapshotTestCase (4.0.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 4.0.0)
+  - iOSSnapshotTestCase/Core (4.0.0)
+  - iOSSnapshotTestCase/SwiftSupport (4.0.0):
+    - iOSSnapshotTestCase/Core
+  - PromiseKit (6.5.1):
+    - PromiseKit/CorePromise (= 6.5.1)
+    - PromiseKit/Foundation (= 6.5.1)
+    - PromiseKit/UIKit (= 6.5.1)
+  - PromiseKit/CorePromise (6.5.1)
+  - PromiseKit/Foundation (6.5.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.5.1):
+    - PromiseKit/CorePromise
+  - ReSwift (4.0.1)
+  - ReSwiftRouter (0.6.0):
+    - ReSwift (~> 4.0.0)
+  - SnapKit (4.0.1)
+  - SwiftLint (0.27.0)
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.8.0)
+  - IGListKit (= 3.4.0)
+  - iOSSnapshotTestCase (= 4.0.0)
+  - PromiseKit (= 6.5.1)
+  - ReSwift
+  - ReSwiftRouter
+  - SnapKit (~> 4.0.0)
+  - SwiftLint (= 0.27.0)
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - IGListKit
+    - iOSSnapshotTestCase
+    - PromiseKit
+    - ReSwift
+    - ReSwiftRouter
+    - SnapKit
+    - SwiftLint
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
+  iOSSnapshotTestCase: 711379b19f69a22c131527df862352c877c2773c
+  PromiseKit: 162f56c89aae9989ffc14476a5f821af17c3f4ba
+  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
+  ReSwiftRouter: 81f41b37a5dd1c88e1d3d10a660ff2dcc939ba7c
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: b4a4e35bc335608dce9d37da26566b8c49a92409
+
+COCOAPODS: 1.5.3
